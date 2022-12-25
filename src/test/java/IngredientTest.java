@@ -7,9 +7,9 @@ import praktikum.IngredientType;
 
 public class IngredientTest {
 
+    private final String nameIngredient = "Ingredient";
+    private final float priceIngredient = 300.00f;
     private Ingredient ingredient;
-    private String nameIngredient = "Ingredient";
-    private float priceIngredient = 300.00f;
 
     @Before
     public void createIngredient() {
@@ -22,7 +22,7 @@ public class IngredientTest {
         float expected = 300.00f;
         float actual = ingredient.getPrice();
         float delta = 0.00f;
-        Assert.assertEquals("Отклонение в стоимости ",expected, actual, delta);
+        Assert.assertEquals("Отклонение в стоимости ", expected, actual, delta);
     }
 
     // Проверка метода названия ингредиента
@@ -30,7 +30,7 @@ public class IngredientTest {
     public void getNameTest() throws Exception {
         String expected = "Ingredient";
         String actual = ingredient.getName();
-        Assert.assertEquals("Неправильное название ингридиента ",expected, actual);
+        Assert.assertEquals("Неправильное название ингридиента ", expected, actual);
     }
 
     // Проверка метода типа ингредиента

@@ -20,6 +20,7 @@ public class IngredientTypeTest {
                         {"SAUCE"},
                 };
     }
+
     // Проверка FILLING и SAUCE в enum
     @Test
     public void ingredientTypeTest() {

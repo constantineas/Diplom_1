@@ -13,26 +13,27 @@ import praktikum.IngredientType;
 
 @RunWith(value = Parameterized.class)
 public class BurgerTest {
+    private final String bunName;
+    private final float bunPrice;
+    private final IngredientType ingredientType;
+    private final IngredientType ingredientType2;
+    private final String ingredientName;
+    private final String ingredientName2;
+    private final float ingredientPrice;
+    private final float ingredientPrice2;
+    private final String bunLook;
+    private final String ingredientPrint;
+    private final String ingredientPrint2;
+    private final String totalPriceBun;
+    private final String totalPriceOfIngredient;
+    private final String totalPriceOfTwoIngredient;
     Burger burger;
-
     @Mock
     Bun bun;
     @Mock
     Ingredient ingredient;
-
     @Mock
     Ingredient ingredient2;
-
-    private String bunName;
-    private float bunPrice;
-    private IngredientType ingredientType, ingredientType2;
-    private String ingredientName, ingredientName2;
-    private float ingredientPrice, ingredientPrice2;
-    private String bunLook;
-    private String ingredientPrint, ingredientPrint2;
-    private String totalPriceBun;
-    private String totalPriceOfIngredient;
-    private String totalPriceOfTwoIngredient;
 
     public BurgerTest(String bunName, float bunPrice,
                       IngredientType ingredientType, String ingredientName, float ingredientPrice,
@@ -57,13 +58,13 @@ public class BurgerTest {
     }
 
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1} {2} {3} {4} {5} {6} {7}")
     public static Object[] getData() {
         return new Object[][]
                 {
                         {"black bun", 10.00f,
-                                IngredientType.SAUCE,"hot sauce", 10.00f,
-                                IngredientType.FILLING,"cutlet", 10.00f,
+                                IngredientType.SAUCE, "hot sauce", 10.00f,
+                                IngredientType.FILLING, "cutlet", 10.00f,
                                 "(==== black bun ====)\r\n",
                                 "= sauce hot sauce =\r\n",
                                 "= filling cutlet =\r\n",

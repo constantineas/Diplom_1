@@ -1,12 +1,12 @@
-import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 import praktikum.Bun;
 
 public class BunTest {
+    private final String nameOfBun = "NameBun";
+    private final float priceOfBun = 250.00f;
     private Bun bun;
-    private String nameOfBun = "NameBun";
-    private float priceOfBun = 250.00f;
 
     @Before
     public void createBun() {
